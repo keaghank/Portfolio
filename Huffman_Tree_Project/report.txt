@@ -1,0 +1,48 @@
+Author: Keaghan Knight, ktknight
+Lab: Friday 2:30 - 4:25
+
+The goal of this project is to demonstrate the Huffman coding algorithm. A lossless data compression algorithm.
+The algorithm assigns a variable-length code to an input character. The length of the associated code is derived from
+the frequency of each character. Most frequent characters receive the smallest codes, while the least frequent
+characters receive the largest codes. These codes are unique to each character. The algorithm follows these steps.
+
+1. For each unique character, create a leaf node, l. Then build a min heap of all the leaf nodes. A min heap is a
+priority queue, where the least frequent character is the root.
+
+2. Take two nodes, x and y, with the lowest frequency from the min heap.
+
+3. Create a new node, n, where the frequency is the sum of x and y. Set node n's left and right children to x and y
+respectively. Add node n to the min heap.
+
+4. Repeat 2 and 3 until the heap is only one node r. Node r is the root.
+
+
+Alice in Wonderland Statistics:
+Number of Characters - 163675
+Average length of a code in bits - 4.60
+Number of bits text is in encoded with - 752855
+Savings in bits - 556545
+Number of characters text is encoded with - 94108
+Savings in characters - 69567
+Decompressing yields in bits - 752855
+Recovered text in characters - 163675
+
+Moby Dick Statistics:
+Number of Characters - 12352
+Average length of a code in bits - 4.43
+Number of bits text is in encoded with - 54691
+Savings in bits - 44125
+Number of characters text is encoded with - 6838
+Savings in characters - 5514
+Decompressing yields in bits - 54691
+Recovered text in characters - 12353
+
+Hawaii Myths Statistics:
+Number of Characters - 1066585
+Average length of a code in bits - 4.45
+Number of bits text is in encoded with - 4742635
+Savings in bits - 3790045
+Number of characters text is encoded with - 592831
+Savings in characters - 473754
+Decompressing yields in bits - ? Time Out
+Recovered text in characters - ? Time Out
